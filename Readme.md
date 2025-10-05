@@ -19,7 +19,7 @@ MacBook-Air:task-scheduler anish$ cat tasks.txt
 
 ## Build and Run
 
-- GTest Installer Script: https://gist.github.com/butuzov/e7df782c31171f9563057871d0ae444a
+- Google's GTest (GG) Installer Script: https://gist.github.com/butuzov/e7df782c31171f9563057871d0ae444a
 
 ```bash
 
@@ -40,3 +40,12 @@ CMake Error at CMakeLists.txt:1 (cmake_minimum_required):
 g++ -std=c++17 test_TaskScheduler.cpp -lgtest -lgtest_main -pthread -o test_tasks
 ./test_tasks
 ```
+
+## Code Style Checks
+
+- brew install llvm
+- echo 'export PATH="/opt/homebrew/opt/llvm/bin:$PATH"' >> ~/.zshrc
+- source ~/.zshrc
+- clang-tidy --version
+- clang-tidy $(find . -name '*.cpp' ! -name 'test_*') -- -I/opt/homebrew/include
+
