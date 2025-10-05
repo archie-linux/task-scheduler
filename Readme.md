@@ -49,3 +49,4 @@ g++ -std=c++17 test_TaskScheduler.cpp -lgtest -lgtest_main -pthread -o test_task
 - clang-tidy --version
 - clang-tidy $(find . -name '*.cpp' ! -name 'test_*') -- -I/opt/homebrew/include
 
+> This project is casually coded.
